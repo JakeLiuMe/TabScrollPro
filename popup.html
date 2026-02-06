@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Scroll Pro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      width: 320px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .tagline {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.1);
+      padding: 12px 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .toggle-label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .toggle {
+      position: relative;
+      width: 50px;
+      height: 26px;
+    }
+
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.3);
+      transition: 0.3s;
+      border-radius: 26px;
+    }
+
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .toggle-slider {
+      background-color: #4ade80;
+    }
+
+    input:checked + .toggle-slider:before {
+      transform: translateX(24px);
+    }
+
+    .settings-group {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .settings-group h2 {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.9;
+    }
+
+    .setting-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .setting-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .setting-label {
+      font-size: 13px;
+    }
+
+    select {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    select option {
+      background: #5a67d8;
+      color: white;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .checkbox-container input {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .shortcut-info {
+      background: rgba(0,0,0,0.2);
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .shortcut-info h3 {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      opacity: 0.9;
+    }
+
+    .shortcut {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .shortcut:last-child {
+      margin-bottom: 0;
+    }
+
+    kbd {
+      background: rgba(255,255,255,0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 11px;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    footer a {
+      color: white;
+      opacity: 0.8;
+      font-size: 11px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .status {
+      font-size: 11px;
+      text-align: center;
+      padding: 6px;
+      background: rgba(74, 222, 128, 0.3);
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .status.disabled {
+      background: rgba(239, 68, 68, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚡ Tab Scroll Pro</h1>
+      <div class="tagline">Scroll through tabs with ease</div>
+    </header>
+
+    <div id="status" class="status">Extension is active</div>
+
+    <div class="toggle-container">
+      <span class="toggle-label">Enable Tab Scrolling</span>
+      <label class="toggle">
+        <input type="checkbox" id="enabled" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <div class="settings-group">
+      <h2>Behavior</h2>
+      
+      <div class="setting-row">
+        <span class="setting-label">Modifier Key</span>
+        <select id="requireModifier">
+          <option value="alt">Alt (Option)</option>
+          <option value="ctrl">Ctrl (Cmd)</option>
+          <option value="shift">Shift</option>
+          <option value="none">None (Always)</option>
+        </select>
+      </div>
+
+      <div class="setting-row">
+        <span class="setting-label">Scroll Direction</span>
+        <select id="scrollDirection">
+          <option value="natural">Natural</option>
+          <option value="inverted">Inverted</option>
+        </select>
+      </div>
+
+      <div class="setting-row">
+        <label class="checkbox-container">
+          <input type="checkbox" id="wrapAround" checked>
+          <span class="setting-label">Wrap around tabs</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="shortcut-info">
+      <h3>⌨️ Keyboard Shortcuts</h3>
+      <div class="shortcut">
+        <span>Previous Tab</span>
+        <kbd>Alt + ←</kbd>
+      </div>
+      <div class="shortcut">
+        <span>Next Tab</span>
+        <kbd>Alt + →</kbd>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://github.com/JakeLiuMe/TabScrollPro" target="_blank">GitHub</a>
+      &nbsp;•&nbsp;
+      <a href="#" id="rateLink">⭐ Rate Extension</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

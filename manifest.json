@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Scroll Pro",
+  "version": "1.0.0",
+  "description": "Scroll through your browser tabs with your mouse wheel. Simple, fast, and lightweight. Brings back the tab scrolling that Chrome removed!",
+  "author": "Jake Liu",
+  "homepage_url": "https://github.com/JakeLiuMe/TabScrollPro",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Tab Scroll Pro Settings"
+  },
+  "commands": {
+    "scroll-left": {
+      "suggested_key": {
+        "default": "Alt+Left",
+        "mac": "Alt+Left"
+      },
+      "description": "Switch to previous tab"
+    },
+    "scroll-right": {
+      "suggested_key": {
+        "default": "Alt+Right",
+        "mac": "Alt+Right"
+      },
+      "description": "Switch to next tab"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

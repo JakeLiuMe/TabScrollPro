@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="url(#bg)"/>
+  <!-- Tab shapes -->
+  <g fill="white">
+    <!-- Left tab (faded) -->
+    <rect x="15" y="35" width="30" height="25" rx="4" opacity="0.4"/>
+    <!-- Center tab (active) -->
+    <rect x="49" y="30" width="30" height="30" rx="4" opacity="1"/>
+    <!-- Right tab (faded) -->
+    <rect x="83" y="35" width="30" height="25" rx="4" opacity="0.4"/>
+    <!-- Arrow indicator (scroll direction) -->
+    <path d="M30 80 L64 95 L98 80 M30 75 L64 90 L98 75" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

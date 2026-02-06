@@ -1,0 +1,18 @@
+# Build files
+*.zip
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node (if we add build tools later)
+node_modules/
+package-lock.json
