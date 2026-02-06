@@ -1,0 +1,67 @@
+🎯 CHROME REMOVED TAB SCROLLING. WE BROUGHT IT BACK.
+
+Tab Scroll Pro lets you scroll through your browser tabs using your mouse wheel - the feature Google took away!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✨ HOW IT WORKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Hold Alt (or your preferred modifier key)
+• Scroll up → Previous tab
+• Scroll down → Next tab
+
+That's it. Simple, fast, and intuitive.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 KEY FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Mouse Wheel Tab Switching - Navigate tabs naturally
+✅ Keyboard Shortcuts - Alt+Left/Right arrows
+✅ Customizable - Choose your modifier key (Alt, Ctrl, Shift, or None)
+✅ Natural/Inverted Scroll - Pick what feels right
+✅ Wrap Around - Cycle seamlessly from last tab to first
+✅ Lightweight - Only 30KB, no bloat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🛡️ PRIVACY FIRST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• NO data collection
+• NO tracking
+• NO analytics
+• NO network requests
+• Minimal permissions - just what's needed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚙️ SETTINGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Click the extension icon to customize:
+• Toggle extension on/off
+• Choose modifier key
+• Set scroll direction
+• Enable/disable wrap-around
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💡 WHY TAB SCROLL PRO?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Other tab scroll extensions are:
+❌ Outdated (still using Manifest V2)
+❌ Unreliable or buggy
+❌ Bloated with unnecessary features
+❌ Collecting your data
+
+Tab Scroll Pro is:
+✅ Modern (Manifest V3)
+✅ Fast and lightweight
+✅ Open source
+✅ Actively maintained
+✅ Privacy-respecting
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you like Tab Scroll Pro, please leave a ⭐ review!
+
+Source code: https://github.com/JakeLiuMe/TabScrollPro
