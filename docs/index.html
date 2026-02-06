@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Scroll Pro - Scroll Through Tabs with Your Mouse Wheel</title>
+  <meta name="description" content="Bring back Chrome's tab scrolling feature. Scroll through tabs with your mouse wheel. Simple, fast, and lightweight.">
+  <meta property="og:title" content="Tab Scroll Pro">
+  <meta property="og:description" content="Scroll through browser tabs with your mouse wheel. Chrome removed it. We brought it back.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/JakeLiuMe/TabScrollPro/main/icons/icon128.png">
+  <link rel="icon" href="https://raw.githubusercontent.com/JakeLiuMe/TabScrollPro/main/icons/icon32.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      min-height: 100vh;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+    header { text-align: center; padding: 60px 0; }
+    .logo { font-size: 80px; margin-bottom: 20px; }
+    h1 { 
+      font-size: 48px; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+    .tagline { font-size: 20px; color: #a0aec0; margin-bottom: 30px; }
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 60px 0;
+    }
+    .feature {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .feature-icon { font-size: 40px; margin-bottom: 15px; }
+    .feature h3 { font-size: 20px; margin-bottom: 10px; }
+    .feature p { color: #a0aec0; line-height: 1.6; }
+    .demo {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .demo h2 { margin-bottom: 20px; }
+    .demo-keys {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      font-size: 24px;
+    }
+    kbd {
+      background: rgba(255,255,255,0.1);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-family: monospace;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #666;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    footer a { color: #667eea; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">⚡</div>
+      <h1>Tab Scroll Pro</h1>
+      <p class="tagline">Scroll through browser tabs with your mouse wheel.<br>Chrome removed it. We brought it back.</p>
+      <a href="https://github.com/JakeLiuMe/TabScrollPro" class="cta-btn">Get It Free →</a>
+    </header>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🖱️</div>
+        <h3>Mouse Wheel Navigation</h3>
+        <p>Hold Alt and scroll to switch between tabs instantly. Natural and intuitive.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⌨️</div>
+        <h3>Keyboard Shortcuts</h3>
+        <p>Alt+Left/Right arrow keys for quick navigation without touching your mouse.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚙️</div>
+        <h3>Fully Customizable</h3>
+        <p>Choose your modifier key, scroll direction, and wrap-around behavior.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Privacy First</h3>
+        <p>No tracking, no analytics, no data collection. Everything stays local.</p>
+      </div>
+    </div>
+
+    <div class="demo">
+      <h2>How It Works</h2>
+      <div class="demo-keys">
+        <kbd>Alt</kbd>
+        <span>+</span>
+        <span>🖱️ Scroll</span>
+        <span>=</span>
+        <span>Switch Tabs</span>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made with ❤️ by <a href="https://github.com/JakeLiuMe">Jake Liu</a></p>
+      <p style="margin-top: 10px;"><a href="https://github.com/JakeLiuMe/TabScrollPro">GitHub</a> • MIT License</p>
+    </footer>
+  </div>
+</body>
+</html>
